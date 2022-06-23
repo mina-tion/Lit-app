@@ -32,7 +32,7 @@ const SingIn: React.FC = () => {
   }
 
   const handleSignIn = async () => {
-	console.log(getValues())
+    console.log(getValues())
     const values = getValues()
 
     if (values) {
@@ -43,8 +43,8 @@ const SingIn: React.FC = () => {
 
       const data = await authorization.signIn(dataFields)
 
-      if (data.access_token) {
-        login(data.access_token)
+      if (data.token) {
+        login(data.token)
         history.push('/')
       }
     }

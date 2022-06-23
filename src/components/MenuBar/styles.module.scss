@@ -16,7 +16,7 @@
         position: relative;
         box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.3);
         &:hover { 
-            background-color: aquamarine !important;
+            background-color: #ccdbe1 !important;
             color: #751603;
         }
 
@@ -24,7 +24,15 @@
         &:focus,
         &:active {
             color: $menuActiveText !important;
-            background-color: rgb(187, 127, 255) !important;
+            background-color: #91acb9 !important;
+        }
+
+        .item { 
+            color: #751603;
+           
+            &:active {
+                color: $menuActiveText !important;
+            }
         }
     }
 }

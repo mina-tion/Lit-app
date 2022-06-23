@@ -17,7 +17,7 @@ const SingUp: React.FC = () => {
   const {
     register,
     handleSubmit,
-	getValues,
+    getValues,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -34,7 +34,6 @@ const SingUp: React.FC = () => {
 
       authorization.signUp(data)
     }
-    
   }
   const toSignIn = (): void => {
     history.push('/login')
@@ -62,13 +61,18 @@ const SingUp: React.FC = () => {
         <InputField
           register={register}
           type="password"
-          title="Password"
+          title="Confirm password"
           name="passwordConfirmation"
           errMessage={errors.passwordConfirmation?.message}
           onChange={() => {}}
         />
 
-        <input type="submit" value="Sign up" className={styles.submitButton} />
+        <input
+          type="submit"
+          value="Sign up"
+          className={styles.submitButton}
+          onClick={handleSignUp}
+        />
       </form>
 
       <a href="/" className={styles.link} onClick={toSignIn}>

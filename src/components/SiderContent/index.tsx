@@ -12,7 +12,7 @@ const SiderContent: React.FC = observer(() => {
 
 	return (
 		<div className={styles.contentWrapper}>
-			<h2 className={styles.title}>Popular pairs</h2>
+			<h2 className={styles.title}>sider</h2>
 			
 		</div>
 	);

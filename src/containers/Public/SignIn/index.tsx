@@ -40,7 +40,6 @@ const SingIn: React.FC = () => {
         email: values.email,
         password: values.password,
       }
-
       const data = await authorization.signIn(dataFields)
 
       if (data.token) {

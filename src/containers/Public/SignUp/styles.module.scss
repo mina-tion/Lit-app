@@ -5,8 +5,8 @@
     margin-top: 200px;
     @include flex(center, center);
     @include flex-direction(column);
-    @include width-height(500px, 600px);
-    background-color: #172060;
+    @include width-height(500px, 500px);
+    background-color: $pageBackground;
 
     .form {
 
@@ -39,11 +39,11 @@
         }
     }
 
-    .link { 
+    .link {
         margin-top: 20px;
         color: rgb(197, 230, 240);
 
-        &:hover { 
+        &:hover {
             text-decoration: underline !important;
         }
     }

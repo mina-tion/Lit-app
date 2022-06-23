@@ -8,7 +8,7 @@ body,
 
   width: 100%;
   height: 100%;
-  background: #dec98e;
+  background: #fffbf0;
 
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -60,4 +60,11 @@ body,
 .ant-menu {
   background: none;
 }
+.ant-menu-item-selected {
+  background-color: #aec3cd !important;
+  color: $menuActiveText !important;
+} 
 
+.ant-menu-item::after { 
+  border: none !important;
+}

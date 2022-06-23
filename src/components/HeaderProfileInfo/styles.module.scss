@@ -1,0 +1,31 @@
+@import './../../sources/styles/mixins.scss';
+
+.profileInfoContainer {
+    @include flex(flex-end, center);
+    @include flex-direction(column);
+
+    .usernameText {
+        text-align: center;
+        @include text-style(19.5px, 500, 29.25px, $color: rgba(255, 255, 255, 1));
+        margin: 0;
+
+        &::before {
+            content: url('./../../sources/images/profileArrowDown.svg');
+            margin-right: 14.5px;
+            cursor: pointer;
+        }
+    }
+
+    .verificationText {
+        margin: 0;
+        text-align: center;
+        @include text-style(13px, 400, 19.5px, $color: rgba(190, 182, 182, 1))
+    }
+
+
+    .button {
+        height: fit-content;
+        @include text-style(16px, $color: #ffffff);
+        text-decoration: underline !important;
+    }
+}

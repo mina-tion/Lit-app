@@ -1,0 +1,63 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+html,
+body,
+#root {
+
+  width: 100%;
+  height: 100%;
+  background: #dec98e;
+
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-family: 'Roboto+Mono';
+  @include position-absolute-center;
+
+  h1,h2,h3,h4, p { 
+    padding: 0;
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+:root {
+  ::-webkit-scrollbar-thumb {
+ background: rgba($color: #ffffff, $alpha: 0.2);
+   
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  margin: 24px 0 0 0;
+  //width: 10px;
+ // height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin-bottom: 100px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color: #ffffff, $alpha: 0.4);
+}
+
+.ant-menu {
+  background: none;
+}
+

@@ -1,0 +1,51 @@
+@import 'sources/styles/mixins.scss';
+
+.signInContainer {
+    margin: 0 auto;
+    margin-top: 200px;
+    @include flex(center, center);
+    @include flex-direction(column);
+    @include width-height(500px, 500px);
+    background-color: #172060;
+
+    .form {
+
+        .inputContainer {
+            height: 100px;
+            margin: 0 0 5px 0;
+
+            .inputField {
+                @include text-style(20px);
+                @include width-height(350px, 50px);
+            }
+
+            .inputTitle {
+                @include text-style(20px, $color: #ffffff);
+            }
+
+            .error {
+
+                @include text-style(14px, $color:rgb(229, 145, 145));
+            }
+        }
+
+        .submitButton {
+            @include width-height(350px, 50px);
+            @include text-style(20px);
+            margin: 0 0 30px 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .link { 
+        margin-top: 20px;
+        color: rgb(197, 230, 240);
+
+        &:hover { 
+            text-decoration: underline !important;
+        }
+    }
+}

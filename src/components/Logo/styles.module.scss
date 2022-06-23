@@ -1,0 +1,13 @@
+@import 'sources/styles/mixins.scss';
+
+.iconContainer {
+/*     position: relative; */
+    height: 10px;
+    width: 63px;
+
+    .img {
+        height: 100px;
+        width: 100px;
+     
+    }
+}

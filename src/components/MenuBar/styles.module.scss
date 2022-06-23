@@ -1,0 +1,30 @@
+@import './../../sources/styles/mixins.scss';
+
+.menuList {
+    width: 700px !important;
+    border-style: none !important;
+    @include flex(flex-start !important, space-between !important);
+    height: 100% !important;
+    box-sizing: content-box;
+
+    .menuItem {
+   
+        @include text-style(22px, 400, 24px, $color: $menuText !important);
+        text-align: center;
+        background-color: rgba(247, 232, 205, 0.6); 
+        height: 50px !important;
+        position: relative;
+        box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.3);
+        &:hover { 
+            background-color: aquamarine !important;
+            color: #751603;
+        }
+
+        &:visited,
+        &:focus,
+        &:active {
+            color: $menuActiveText !important;
+            background-color: rgb(187, 127, 255) !important;
+        }
+    }
+}

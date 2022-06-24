@@ -10,7 +10,7 @@ import avatar from 'sources/images/avatar.jpg';
 const Avatar: React.FC = () => {
 	return (
 		<div className={styles.avatarContainer}>
-			<img src={avatar} alt='avatar' />
+			<img src={avatar} alt='avatar' className={styles.image}/>
 			<div className={styles.statusHolder}>
 				<div className={styles.status}></div>
 			</div>

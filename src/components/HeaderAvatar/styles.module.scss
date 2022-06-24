@@ -3,13 +3,18 @@
 .avatarContainer {
     position: relative;
     @include position-absolute($right: 0px, $top: 0px);
+    padding: 5px 10px;
+
+    .image {
+        @include width-height(90px, 120px);
+    }
 
     .statusHolder {
         @include width-height(28px, 28px);
         @include position-absolute($left: -10px, $bottom: -10px);
         @include flex(center, center);
         border-radius: 50%;
-        background-color: rgba(20, 29, 91, 1);
+        background-color: $pageBackground;
 
         .status {
             @include width-height(12px, 12px);

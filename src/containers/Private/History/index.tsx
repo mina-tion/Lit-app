@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { observer } from 'mobx-react'
-import poster from 'sources/images/main.jpg'
+import wani from 'sources/images/Wani.jpg'
 
 //components
 import { Layout } from 'antd'
@@ -80,6 +80,7 @@ const History: React.FC = observer(() => {
         <b>Виникнення японської письменності</b>
       </h4>
       <p>
+        <img src={wani} alt='wani' className={styles.image}/>
         Писемність виникла Японії із запровадженням китайської писемності і першим знайомством з
         китайської вченістю і літературою, за допомогою корейських учених. До знайомства з
         китайськими письменами у Японії був ніякої писемності. Початок вивчення китайської мови у

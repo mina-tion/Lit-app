@@ -1,12 +1,10 @@
 import { createContext, useContext } from 'react'
 import { configure, observable } from 'mobx'
-import tableStore from 'stores/Table'
 import authStore from './Authorization'
 
 configure({ enforceActions: 'observed' })
 
 class RootStore {
-  @observable tableStore = tableStore
   @observable authorizationStore = authStore
 }
 

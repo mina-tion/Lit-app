@@ -24,11 +24,15 @@ const Authors: React.FC = observer(() => {
         <tbody className={styles.body}>
           {tableData.map((genre: any) => (
             <tr className={styles.row}>
-              {Object.keys(genre).map((key, index): any => (
-                <td key={index} className={styles.item}>
-                  {genre[key]}
-                </td>
-              ))}
+              {Object.keys(genre).map((key, index): any => {
+                return (
+                  <td key={index} className={styles.item}>
+                    {key !== 'writings'
+                      ? genre[key]
+                      : genre[key].map((wr: any) => <a href={wr.url}> "{wr.title}" </a>)}
+                  </td>
+                )
+              })}
             </tr>
           ))}
         </tbody>

@@ -1,15 +1,30 @@
 import { observable, action, makeObservable } from 'mobx'
 import { api } from 'config'
 import { AxiosError } from 'axios'
+import { autorun, set, toJS } from 'mobx';
+
+export function autoSave(_this: any, name: string) {
+	const storedJson = localStorage.getItem(name);
+	if (storedJson) {
+		set(_this, JSON.parse(storedJson));
+	}
+	autorun(() => {
+		const value = toJS(_this);
+		localStorage.setItem(name, JSON.stringify(value));
+	});
+}
 
 class Store {
+  public accessToken: string;
   constructor() {
     makeObservable(this)
+    this.accessToken = '';
+		autoSave(this, 'accountName');
   }
   @observable isRegistered = false
   @observable errorDataSignIn = ''
   @observable accountName: string = '';
-
+  @observable bookmarks: any;
 	setAccountName(value: string) {
 		this.accountName = value;
 	}
@@ -28,7 +43,6 @@ class Store {
   async signIn(dataFields: any) {
     try {
       const { data } = await api.post('auth/login', dataFields)
-
       api.defaults.headers.Authorization = `Bearer ${data.access_token}`
 
       return data
@@ -41,6 +55,7 @@ class Store {
       return error
     }
   }
+
 
   @action
   async resetError() {

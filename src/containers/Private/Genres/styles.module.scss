@@ -15,7 +15,7 @@
         tr {
           height: 26px;
           .iconContainer{ 
-              @include flex-center;
+              @include flex(center);
             .icon { 
                 @include width-height(20px,20px);
                 cursor: pointer;

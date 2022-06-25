@@ -5,10 +5,10 @@ import { useStore } from 'stores'
 // components
 
 const ProfileInfo: React.FC = () => {
-  const { loginStore } = useStore()
+  const { authorizationStore } = useStore()
   return (
     <div className={styles.profileInfoContainer}>
-      <h2 className={styles.usernameText}>{loginStore.accountName}</h2>
+      <h2 className={styles.usernameText}>{authorizationStore.accountName}</h2>
 	  <div className={styles.link}><a href='/bookmarks'>Передивитись закладинки</a></div>
     </div>
   )

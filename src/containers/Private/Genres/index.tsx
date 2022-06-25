@@ -1,6 +1,6 @@
 import React from 'react'
 import { observer } from 'mobx-react'
-import star from 'sources/images/star.png'
+import bookmark from 'sources/images/bookmarkMarked.png'
 //components
 import { headerTitles, tableData } from 'utils/genresTableData'
 
@@ -30,7 +30,7 @@ const Genres: React.FC = observer(() => {
               ))}
               {console.log(i+1)}
               <div className={styles.iconContainer}>
-                <img src={star} onClick={()=>{}} className={styles.icon}/>
+                <img src={bookmark} onClick={()=>{}} className={styles.icon}/>
               </div>
             </tr>
           ))}

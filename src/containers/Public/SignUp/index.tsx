@@ -11,7 +11,7 @@ import { useHistory } from 'react-router'
 
 const SingUp: React.FC = () => {
   const history = useHistory()
-  const { authorization } = useStore()
+  const { authorizationStore } = useStore()
   /* const [done, setDone] = useState(false) */
 
   const {
@@ -31,13 +31,13 @@ const SingUp: React.FC = () => {
         email: values.email,
         password: values.password,
       }
-
-      authorization.signUp(data)
+      authorizationStore.signUp(data)
+      /* history.push('/login') */
     }
   }
   const toSignIn = (): void => {
     history.push('/login')
-    authorization.resetError()
+    authorizationStore.resetError()
   }
   return useObserver(() => (
     <div className={styles.container}>

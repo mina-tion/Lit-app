@@ -12,9 +12,9 @@ import InputField from 'components/InputField'
 import { useObserver } from 'mobx-react-lite'
 
 const SingIn: React.FC = () => {
-  const { loginStore } = useStore()
+ 
   const history = useHistory()
-  const { authorization } = useStore()
+  const { authorizationStore } = useStore()
   const {
     register,
     handleSubmit,
@@ -25,14 +25,12 @@ const SingIn: React.FC = () => {
   })
 
   const responseGoogle = (response: any) => {
-    console.log(response)
     login(response.access_token)
-    loginStore.setAccountName(response.profileObj.familyName + '' + response.profileObj.givenName)
+    authorizationStore.setAccountName(response.profileObj.familyName + '' + response.profileObj.givenName)
     history.push('/')
   }
 
   const handleSignIn = async () => {
-    console.log(getValues())
     const values = getValues()
 
     if (values) {
@@ -40,11 +38,11 @@ const SingIn: React.FC = () => {
         email: values.email,
         password: values.password,
       }
-      const data = await authorization.signIn(dataFields)
+      const data = await authorizationStore.signIn(dataFields)
 
       if (data.token) {
         login(data.token)
-        loginStore.setAccountName(data.email)
+        authorizationStore.setAccountName(data.email)
         history.push('/')
       }
     }
@@ -82,7 +80,7 @@ const SingIn: React.FC = () => {
         />
       </form>
 
-      <div className={styles.googleButton}>
+ {/*      <div className={styles.googleButton}>
         <GoogleLogin
           clientId="1094878947480-gqprqhjnhbt3m5b5igu5nton88da8gdd.apps.googleusercontent.com"
           buttonText="Sign in with google"
@@ -90,7 +88,7 @@ const SingIn: React.FC = () => {
           onFailure={responseGoogle}
           cookiePolicy="single_host_origin"
         />
-      </div>
+      </div> */}
 
       <a href="" className={styles.link} onClick={toSignUp}>
         Don't have an account yet? Sign up

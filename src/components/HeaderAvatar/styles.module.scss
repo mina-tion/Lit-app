@@ -6,7 +6,7 @@
     padding: 5px 10px;
 
     .image {
-        @include width-height(90px, 120px);
+        @include width-height(75px, 100px);
     }
 
     .statusHolder {

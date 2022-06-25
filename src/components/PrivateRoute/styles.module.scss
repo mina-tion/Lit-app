@@ -1,51 +1,55 @@
 @import 'sources/styles/mixins.scss';
 
 .container {
-  width: 100%;
-  min-width: 1440px;
-  min-height: 100% !important;
-  overflow: hidden;
-  box-sizing: content-box;
-  margin: 0 auto;
-  @include flex;
-  @include flex-direction(column);
-  position: relative;
-
-  .header {
-    @include flex(flex-start, space-between);
     width: 100%;
-    z-index: 10;
-    min-height: 142px;
-    box-sizing: border-box;
-    padding: 40px 140px 0px 140px;
-    background-image: url('../../sources/images/background.jpg'); 
-    box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, 0.1);
-
-  }
-
-  .layout {
-    width: 100%;
+    min-width: 1440px;
+    min-height: 100% !important;
+    overflow: hidden;
+    box-sizing: content-box;
+    margin: 0 auto;
+    @include flex;
+    @include flex-direction(column);
     position: relative;
-    z-index: 3;
+    background: #fffbf0;
 
-    .sider {
-      background-color: $pageBackground;
-      min-width: 323px !important;
+    .header {
+        @include flex(flex-start, center);
+        width: 100%;
+        z-index: 10;
+        min-height: 142px;
+        box-sizing: border-box;
+        padding: 40px 140px 0px 140px;
+        background-image: url('../../sources/images/background.jpg');
+        box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .content {
-      background: #fffbf0;
-      padding: 0;
-      margin: 0;
-    }
-  }
+    .layout {
+        width: 100%;
+        position: relative;
+        z-index: 3;
 
-  .footer {
-    background-color: $pageBackground;
-    padding: 0;
-    z-index: 10;
-    flex: 0 0 auto;
-    width: 100%;
-  }
+        .content {
+            border: 2px solid;
+            border-color: $pageBackground;
+            opacity: 0.8;
+            .sider {
+                background-color: $pageBackground;
+                min-width: 270px !important;
+                min-height: 100%;
+                margin-left: 30px;
+            }
+            background: #fffbf0;
+            padding: 30px 240px;
+            @include flex(flex-start, space-between)
+        }
+    }
+
+    .footer {
+        background-color: $pageBackground;
+        padding: 0;
+        z-index: 10;
+        flex: 0 0 auto;
+        width: 100%;
+    }
 
 }

@@ -12,12 +12,8 @@ class Store {
   @action
   async signUp(dataFields: any) {
     try {
-    /*   const { data } = await api.get('auth/users', dataFields)
-      console.log(data)   */
-      /* if (data) { */
-        this.isRegistered = true
-        await api.post('auth/registration', dataFields)
-      /* } */
+      this.isRegistered = true
+      await api.post('auth/registration', dataFields)
     } catch (error) {
       console.log(error, 'error')
     }

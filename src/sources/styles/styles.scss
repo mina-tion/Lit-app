@@ -17,18 +17,28 @@ body,
 
   h1,h2,h3,h4, p { 
     padding: 0;
-    margin: 0;
+    margin:0;
+    margin-bottom: 15px;
   }
 
   ul,
   ol {
     list-style: none;
-    padding: 0;
+    /* padding: 0; */
+    list-style-type: square;
   }
 
+  ol{ 
+    list-style-type: decimal;
+  }
   a {
     text-decoration: none;
   }
+
+  br {
+    line-height: 10px;
+    height: 10px;
+ }
 }
 
 :root {

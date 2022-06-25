@@ -17,7 +17,14 @@ const MenuBar: React.FC = () => {
     >
       {menuItems.map(item => (
         <Menu.Item key={item.route} className={styles.menuItem}>
-          <NavLink to={item.route} activeClassName="selected" className={styles.item}>
+          <NavLink
+            to={item.route}
+            activeClassName="selected"
+            activeStyle={{
+              color: '#12986F',
+            }}
+            className={styles.item}
+          >
             {item.title}
           </NavLink>
         </Menu.Item>

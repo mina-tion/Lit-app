@@ -4,16 +4,15 @@ import { useStore } from 'stores';
 
 // style
 import styles from './styles.module.scss';
+import HeaderProfile from 'components/HeaderProfile';
 
 //components
 
 
 const SiderContent: React.FC = observer(() => {
-
 	return (
 		<div className={styles.contentWrapper}>
-			<h2 className={styles.title}>sider</h2>
-			
+			<HeaderProfile />
 		</div>
 	);
 });

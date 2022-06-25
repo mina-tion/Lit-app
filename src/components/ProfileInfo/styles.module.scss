@@ -3,7 +3,7 @@
     @include flex(flex-end, center);
     @include flex-direction(column);
 
-    padding: 15px;
+    padding: 25px 5px;
 
     .link { 
         @include text-style(18px, 500, 20px, $color: rgba(255, 255, 255, 1));
@@ -11,7 +11,7 @@
 
     .usernameText {
         text-align: center;
-        @include text-style(18px, 500, 20px, $color: rgba(255, 255, 255, 1)!important);
+        @include text-style(16px, 500, 20px, $color: rgba(255, 255, 255, 1)!important);
         margin: 0;
 
         &::before {

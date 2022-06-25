@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { observer } from 'mobx-react'
-import bookmark from 'sources/images/bookmarkMarked.png'
+import bookmarkM from 'sources/images/bookmarkMarked.png'
+import bookmark from 'sources/images/bookmark.png'
 //components
 import { headerTitles, tableData } from 'utils/genresTableData'
-
+import { useStore } from 'stores'
 // style
 import styles from './styles.module.scss'
 
 const Genres: React.FC = observer(() => {
+  const { authorizationStore } = useStore()
+ 
+  useEffect(() => {
+    authorizationStore.getBookmarks()
+  }, [])  
+ 
   return (
     <div className={styles.wrapper}>
       <h2>Жанри японської літератури</h2>
@@ -28,9 +35,12 @@ const Genres: React.FC = observer(() => {
                   {genre[key]}
                 </td>
               ))}
-              {console.log(i+1)}
               <div className={styles.iconContainer}>
-                <img src={bookmark} onClick={()=>{}} className={styles.icon}/>
+                <img
+                  src={authorizationStore.bookmarks&&authorizationStore.bookmarks.genres.includes(i + 1) ? bookmarkM : bookmark}
+                  onClick={() => authorizationStore.setBookmarks(i + 1, 'genres')}
+                  className={styles.icon}
+                />
               </div>
             </tr>
           ))}

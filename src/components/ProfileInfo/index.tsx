@@ -9,7 +9,7 @@ const ProfileInfo: React.FC = () => {
   return (
     <div className={styles.profileInfoContainer}>
       <h2 className={styles.usernameText}>{authorizationStore.accountName}</h2>
-	  <div className={styles.link}><a href='/bookmarks'>Передивитись закладинки</a></div>
+	  {/* <div className={styles.link}><a href='/bookmarks'>Передивитись закладинки</a></div> */}
     </div>
   )
 }

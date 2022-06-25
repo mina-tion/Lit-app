@@ -44,6 +44,7 @@ const SingIn: React.FC = () => {
 
       if (data.token) {
         login(data.token)
+        loginStore.setAccountName(data.email)
         history.push('/')
       }
     }

@@ -1,0 +1,24 @@
+@import './../../sources/styles/mixins.scss';
+.profileInfoContainer {
+    @include flex(flex-end, center);
+    @include flex-direction(column);
+
+    padding: 15px;
+
+    .link { 
+        @include text-style(18px, 500, 20px, $color: rgba(255, 255, 255, 1));
+    }
+
+    .usernameText {
+        text-align: center;
+        @include text-style(18px, 500, 20px, $color: rgba(255, 255, 255, 1)!important);
+        margin: 0;
+
+        &::before {
+            content: url('./../../sources/images/profileArrowDown.svg');
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    }
+
+}

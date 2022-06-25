@@ -14,14 +14,7 @@
         background-image: url('../../../sources/images/tableBackground.jpg');
         tr {
           height: 26px;
-          .iconContainer{ 
-              @include flex-center;
-            .icon { 
-                @include width-height(20px,20px);
-                cursor: pointer;
-            }
-          }
-          
+    
           td {
            /*  background: #ede3e3; */
             border: 1px solid $pageBackground;
@@ -31,6 +24,7 @@
     
             &:first-child {
               @include text-style(20px, 600, $font1);
+
             }
     
             div {

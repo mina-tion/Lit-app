@@ -1,29 +1,16 @@
 @import 'sources/styles/mixins.scss';
 
 .contentWrapper {
-  overflow-y: scroll;
-  overflow-x: hidden;
-
-  .title {
-    margin: 20px 0px 50px 40px !important;
-    @include text-style(19.5px, 500, 29.25px, $color: #ffffff);
-  }
-
-  .cardWrapper {
+  @include flex(flex-start, space-between);
+  .link { 
+    @include text-style(20px, $color: #ffffff);
+     
     cursor: pointer;
-    height: 68px;
-    @include flex(center);
-    padding: 0px 0px 0px 40px !important;
-    @include text-style(18.5px, 500, 27.75px, $color: #ffffff);
-
-    &:hover {
-      background-color: #ffffff;
-      color: #141D53;
-    }
   }
-
-  .active {
-    background-color: #ffffff;
-    color: #141D53;
-  }
+  .button {
+    height: fit-content;
+    padding: 15px;
+    @include text-style(20px, $color: #ffffff);
+    text-decoration: underline !important;
+}
 }

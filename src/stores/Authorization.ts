@@ -8,6 +8,11 @@ class Store {
   }
   @observable isRegistered = false
   @observable errorDataSignIn = ''
+  @observable accountName: string = '';
+
+	setAccountName(value: string) {
+		this.accountName = value;
+	}
 
   @action
   async signUp(dataFields: any) {

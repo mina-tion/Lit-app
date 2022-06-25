@@ -2,7 +2,7 @@ import React from 'react'
 import { observer } from 'mobx-react'
 
 //components
-import { headerTitles, tableData } from 'utils/genresTableData'
+import { headerTitles, tableData } from 'utils/authorsTableData'
 
 //components
 // style

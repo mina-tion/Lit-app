@@ -2,7 +2,7 @@
 
 .avatarContainer {
     position: relative;
-    @include position-absolute($right: 0px, $top: 0px);
+   
     padding: 5px 10px;
 
     .image {

@@ -38,11 +38,11 @@ const Genres: React.FC = observer(() => {
           ))}
         </thead>
         <tbody className={styles.body}>
-          {tableData.map((comment: any) => (
+          {tableData.map((genre: any) => (
             <tr className={styles.row}>
-              {Object.keys(comment).map((key, index): any => (
+              {Object.keys(genre).map((key, index): any => (
                 <td key={index} className={styles.item}>
-                  {comment[key]}
+                  {genre[key]}
                 </td>
               ))}
             </tr>
@@ -50,12 +50,12 @@ const Genres: React.FC = observer(() => {
         </tbody>
       </table>
       <div className={styles.pagesWrapper}>
-        <Pagination
+       {/*  <Pagination
           current={tableStore.currentPage}
           onChange={handlerChange}
           total={500}
           pageSizeOptions={[]}
-        />
+        /> */}
       </div>
     </div>
   )

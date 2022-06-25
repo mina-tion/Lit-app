@@ -20,9 +20,6 @@ const MenuBar: React.FC = () => {
           <NavLink
             to={item.route}
             activeClassName="selected"
-            activeStyle={{
-              color: '#12986F',
-            }}
             className={styles.item}
           >
             {item.title}

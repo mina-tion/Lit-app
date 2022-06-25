@@ -4,14 +4,14 @@ import { observer } from 'mobx-react'
 //components
 import { headerTitles, tableData } from 'utils/genresTableData'
 
+//components
 // style
 import styles from './styles.module.scss'
 
-
-const Genres: React.FC = observer(() => {
+const Authors: React.FC = observer(() => {
   return (
     <div className={styles.wrapper}>
-      <h2>Жанри японської літератури</h2>
+      <h2>Автори японської літератури</h2>
 
       <table className={styles.table}>
         <thead className={styles.header}>
@@ -37,4 +37,4 @@ const Genres: React.FC = observer(() => {
   )
 })
 
-export default Genres
+export default Authors

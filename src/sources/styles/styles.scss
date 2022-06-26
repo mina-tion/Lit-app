@@ -24,7 +24,7 @@ body,
   ul,
   ol {
     list-style: none;
-    /* padding: 0; */
+    
     list-style-type: square;
   }
 
@@ -33,7 +33,14 @@ body,
   }
   a {
     text-decoration: none;
+    color: #94160b;
+  } 
+  
+  a:hover {
+    color: #c6837d;
   }
+ 
+ 
 
   br {
     line-height: 10px;

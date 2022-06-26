@@ -1,45 +1,59 @@
 @import 'sources/styles/mixins.scss';
 
-.wrapper { 
-    @include text-style(20px);
-    .image { 
-        float: left;
-        margin-right: 20px;
-    }
+.wrapper {
+  @include text-style(20px);
 
-    .markList { 
-        font-size: 18px;
-    }
-    tbody {
-        background-image: url('../../../sources/images/tableBackground.jpg');
-        tr {
-          height: 26px;
-    
-          td {
-           /*  background: #ede3e3; */
-            border: 1px solid $pageBackground;
-            padding: 0px 10px;
+  .imageL {
+    float: left;
+    margin-right: 20px;
+    width: 280px;
+  }
+
+  .imageR {
+    float: right;
+    margin-left: 20px;
+    width: 280px;
+  }
+
+  .markList {
+    font-size: 18px;
+  }
+
+  .table {
+    margin-top: 50px;
+  }
+
+  tbody {
+    background-image: url('../../../sources/images/tableBackground.jpg');
+
+    tr {
+      height: 26px;
+
+      td {
+        /*  background: #ede3e3; */
+        border: 1px solid $pageBackground;
+        padding: 0px 10px;
+        @include text-style(20px, 400, $font1);
+
+
+        &:first-child {
+          @include text-style(20px, 600, $font1);
+        }
+
+        div {
+
+          max-width: 100%;
+          white-space: nowrap;
+
+          a {
+            white-space: nowrap;
+            text-decoration: underline;
             @include text-style(20px, 400, $font1);
-    
-    
-            &:first-child {
-              @include text-style(20px, 600, $font1);
 
-            }
-    
-            div {
-               
-              max-width: 100%;
-              white-space: nowrap;
-              a {
-                white-space: nowrap;
-                text-decoration: underline;
-                @include text-style(20px, 400, $font1);
-               
-              }
-            }
           }
         }
       }
-     
+    }
+  }
+
 }

@@ -32,7 +32,7 @@
         .submitButton {
             @include width-height(350px, 50px);
             @include text-style(20px);
-            margin: 0 0 30px 0;
+            margin: 40px 0 30px 0;
 
             &:hover {
                 cursor: pointer;

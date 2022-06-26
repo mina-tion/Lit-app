@@ -23,14 +23,14 @@ const History: React.FC = observer(() => {
           <li>
             <a href="#history">Історія</a>
           </li>
-          <ol>
+          <ul>
             <li>
-              <a href="#steer">Давня література</a>
+              <a href="#anc">Давня література</a>
             </li>
             <li>
               <a href="#classic">Класична японська література</a>
             </li>
-          </ol>
+          </ul>
           <li>
             <a href="#spec">Специфічні жанри</a>
           </li>
@@ -73,7 +73,7 @@ const History: React.FC = observer(() => {
       <h2 id="history">
         <b>Історія</b>
       </h2>
-      <h3 id="">
+      <h3 id="anc">
         <b>Давня література</b>
       </h3>
       <h4 id="">

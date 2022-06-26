@@ -12,5 +12,6 @@
     padding: 15px;
     @include text-style(20px, $color: #ffffff);
     text-decoration: underline !important;
+    color: #ffffff !important;
 }
 }

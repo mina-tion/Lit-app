@@ -2,6 +2,7 @@ import { observable, action, makeObservable } from 'mobx'
 import { api } from 'config'
 import { AxiosError } from 'axios'
 import { autorun, set, toJS } from 'mobx'
+import {openNotificationWithIcon } from 'utils/notifications'
 
 export function autoSave(_this: any, name: string) {
   const storedJson = localStorage.getItem(name)
@@ -34,6 +35,7 @@ class Store {
     try {
       this.isRegistered = true
       await api.post('auth/registration', dataFields)
+      openNotificationWithIcon('success', "Користувач зареєстрований успішно")
     } catch (error) {
       console.log(error, 'error')
     }
@@ -44,14 +46,22 @@ class Store {
     try {
       const { data } = await api.post('auth/login', dataFields)
       api.defaults.headers.Authorization = `Bearer ${data.access_token}`
+      if (!data.message) { 
+        openNotificationWithIcon('success', "Ви успішно увійшли в акаунт")
+      }
+      else { 
+        openNotificationWithIcon('error', "Невірний пароль")
+      }
       
       return data
+      
     } catch (error) {
       if ((error as AxiosError).response?.data.statusCode === 401) {
         this.errorDataSignIn = 'Email or password is incorrect, please try again'
       } else {
         this.resetError()
       }
+      openNotificationWithIcon('error', "Втрачено зв'язок з сервером")
       return error
     }
   }

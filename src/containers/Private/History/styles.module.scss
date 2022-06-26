@@ -1,15 +1,36 @@
 @import 'sources/styles/mixins.scss';
 
-.wrapper { 
+.wrapper {
     @include text-style(20px);
-    .image { 
+
+    .image {
         float: left;
         margin-right: 20px;
     }
 
-   /*  .image { 
-       float: ;
-    } */
+    .ol {
+        counter-reset: number;
+    }
 
-     
+    .li {
+       counter-increment: li;  
+     }
+
+   /*  ol {
+        counter-reset: li;
+
+        li {
+            position: relative;
+            list-style: none;
+        } */
+
+        .li:before {
+            counter-increment: number;
+	     content:counter(number);
+        }
+    
+
+
+
+
 }

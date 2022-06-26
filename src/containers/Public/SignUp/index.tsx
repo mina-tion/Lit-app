@@ -32,7 +32,8 @@ const SingUp: React.FC = () => {
         password: values.password,
       }
       authorizationStore.signUp(data)
-      /* history.push('/login') */
+      
+      history.push('/login') 
     }
   }
   const toSignIn = (): void => {
